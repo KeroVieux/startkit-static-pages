@@ -23,7 +23,7 @@ _.forEach(files, (i) => {
 module.exports = {
   entry,
   output: {
-    filename: './dist/[name].js'
+    filename: './dist/[name].bundle.js'
   },
   resolve: {
     extensions: ['.js', '.json'],
@@ -88,6 +88,13 @@ module.exports = {
       $: 'jquery',
       Moment: 'moment',
     }),
-    new UglifyJSPlugin(),
+    new UglifyJSPlugin({
+      uglifyOptions: {
+        warning: false,
+        output: {
+          comments: false,
+        }
+      }
+    }),
   ]
 }

@@ -12,3 +12,6 @@
 ## deploy
 1. `yarn run build`
 2. upload `dist + static + *.html` to server
+
+## jsdoc generate
+cli `jsdoc -c ./conf.json`
