@@ -183,37 +183,37 @@ $pink:            #FFDBCF;
 $purple:          #852EF6;
 $brown:          #442B2D;
 
-@each $color in
-        $grey-333,
-        $grey-999,
-        $grey-ccc,
-        $grey-ddd,
-        $grey-eee,
-        $grey-f5,
-        $white,
-        $yellow,
-        $pink,
-        $purple,
-        $brown {
-  .text-color-#{$color} {
+@each $color-name, $color in
+                (grey-333, $grey-333),
+                (grey-999, $grey-999),
+                (grey-ccc, $grey-ccc),
+                (grey-ddd, $grey-ddd),
+                (grey-eee, $grey-eee),
+                (grey-f5, $grey-f5),
+                (white, $white),
+                (yellow, $yellow),
+                (pink, $pink),
+                (purple, $purple),
+                (brown, $brown), {
+  .text-color-#{$color-name} {
     color: $color !important;
   }
-  .bg-color-#{$color} {
+  .bg-color-#{$color-name} {
     background-color: $color !important;
   }
-  .border-color-#{$color} {
+  .border-color-#{$color-name} {
     border: 1px solid $color !important;
   }
-  .border-color-#{$color}-left {
+  .border-color-#{$color-name}-left {
     border-left: 1px solid $color !important;
   }
-  .border-color-#{$color}-right {
+  .border-color-#{$color-name}-right {
     border-right: 1px solid $color !important;
   }
-  .border-color-#{$color}-top {
+  .border-color-#{$color-name}-top {
     border-top: 1px solid $color !important;
   }
-  .border-color-#{$color}-bottom {
+  .border-color-#{$color-name}-bottom {
     border-bottom: 1px solid $color !important;
   }
 }
